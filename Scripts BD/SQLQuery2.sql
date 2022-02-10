@@ -1,4 +1,4 @@
-
+/*Crecion de vista del mejor cliente por mes y anio*/
 
  create view clientes_ordes_total
  as
