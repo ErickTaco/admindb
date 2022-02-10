@@ -67,7 +67,7 @@ select countryID,countryName,cityID,cityName
 from Application.Countries 
 full  join Application.Cities on Application.Cities.CityID=Application.Countries.City
 where CountryID is null or CityID is null
-
+/*Consultas de join*/
 
 select 
 countryID,
