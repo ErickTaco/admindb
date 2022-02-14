@@ -1,3 +1,18 @@
+create PROCEDURE [dbo].[PackageTypes_id]
+(@V_StockItemName Varchar(100))
+
+as
+begin
+
+select 
+StockItemID ,
+last_update
+from 
+Warehouse.StockItems
+where 
+StockItemName=@V_StockItemName
+end
+
 
 create PROCEDURE [dbo].[StockItems_insert]
 (
