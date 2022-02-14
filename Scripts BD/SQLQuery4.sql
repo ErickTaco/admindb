@@ -14,6 +14,32 @@ StockItemName=@V_StockItemName
 end
 
 
+
+
+create PROCEDURE [dbo].[VStockItems_PackageTypes_id]
+(@V_StockItemName Varchar(100))
+
+as
+begin
+declare @V_StockItem_ID int
+select 
+ @V_StockItem_ID=StockItemID 
+from 
+Warehouse.StockItems
+where 
+StockItemName=@V_StockItemName
+
+select UnitPackageID,
+PackageTypeName
+
+from 
+VStockItems_PackageTypes
+where
+StockItemID=@V_StockItem_ID
+
+end
+
+
 create PROCEDURE [dbo].[StockItems_insert]
 (
 
